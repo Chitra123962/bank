@@ -1,0 +1,36 @@
+ <h3>Bank Search Application</h3>
+ 
+   <!-- <input type="text"  placeholder="Search bank fields"/> -->
+
+ <select>
+    <option>List of banks in BENGALURU</option>
+    <option>Mumbai</option>
+    <option>Bengaluru</option>
+    <option>Kolkatta</option>
+    <option>Delhi</option>
+    <option>Cuttack</option>
+</select> 
+<div class="con">
+<input type="text" placeholder="Search.....">
+</div>
+<table border="1" width="100%">
+    <tr>
+    <th>Action</th>
+    <th>Bank Name</th>
+    <th>FSC</th>
+    <th>Bank Id</th>
+    <th>Branch</th>
+</tr>
+    <tr *ngFor="let customer of users | customerbankidFilter:bankid;let i = index">
+        <div>
+            <input type="checkbox">
+        <th scope="row"></th>
+        </div>
+        <td>{{customer.bankname}}</td>
+        <td>{{customer.fsc}}</td>
+        <td>{{customer.bankid}}</td>
+        <td>{{customer.branch}}</td>
+      </tr>
+    
+</table>
+<!-- [(ngModel)]="bankid" -->
